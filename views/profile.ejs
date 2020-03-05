@@ -1,0 +1,37 @@
+<%- include('partials/head.ejs') %>
+<%- include('partials/header.ejs') %>
+
+<div class="container">
+	<div class="row justify-content-center">
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">
+          <h3><img src="<%= user.photos[0].value %>"/> <%= user.displayName %></h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="/logout">Log the Fuck Out!</a></li>
+            <li class="list-group-item"><input type="file" id="file-input"></li>
+            <li class="list-group-item"><button type="button" id="actionsave" class="btn btn-primary hide">Post This Shit!</button></li>
+          </ul> 
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="box-2">
+        <div class="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- <div class="col">
+        <form id="uploadForm" method="post" action="/upload/" enctype="multipart/form-data">
+          <div id="drop">
+            Drop Here
+            <a>Browse</a>
+            <input type="file" name="upl" multiple />
+          </div>
+          <ul></ul>
+        </form>
+    </div>
+  </div> -->
+
+<%- include('partials/footer.ejs') %>

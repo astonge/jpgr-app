@@ -1,0 +1,4 @@
+{
+  "verbose":  true,
+  "ignore":   ["public/*","data/*","data/diagnostic.data/metrics.interim"]
+}

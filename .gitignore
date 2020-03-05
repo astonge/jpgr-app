@@ -1,0 +1,6 @@
+.env
+.DS_Store
+.secrets
+TODO
+node_modules
+do_config.json

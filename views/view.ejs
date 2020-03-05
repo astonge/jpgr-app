@@ -1,0 +1,84 @@
+<%- include('partials/head.ejs') %>
+<%- include('partials/header.ejs') %>
+
+		<div id="edit-dialog" title="Edit Image" style="display:none;">
+			<form>
+				<fieldset>
+					<input type="hidden" name="id" id="edit-id" value="null"/>
+					<input type="text" name="title" id="edit-title" value="T" class="text ui-widget-content ui-corner-all"/>
+					<input type="text" name="desc" id="edit-desc" value="D" class="text ui-widget-content ui-corner-all"/>
+				</fieldset>
+			</form>
+		</div>
+
+		<div id="image-edit-dialog" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Edit Image</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+
+						<div class="container">
+							<div class="row">
+								<div class="col">
+
+										<form>
+											<div class="form-group">
+												<label for="edit-title" class="col-form-label">Image Title:</label>
+												<input type="text" class="form-control" id="edit-title">
+											</div>
+											<div class="form-group">
+												<label for="edit-desc" class="col-form-label">Image Description:</label>
+												<input type="text" class="form-control" id="edit-desc">
+											</div>
+												<!-- <fieldset>
+													<input type="hidden" name="id" id="edit-id" value="null"/>
+													<input type="text" name="title" id="edit-title" value="" class="text ui-widget-content ui-corner-all"/>
+													<input type="text" name="desc" id="edit-desc" value="" class="text ui-widget-content ui-corner-all"/>
+												</fieldset> -->
+										</form>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">Save Changes</button>
+						<button type="button" class="btn btn-secondary">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<% if (!images) { %>
+			<div><h2>Nothing to show.</h2></div>
+    <% } %>
+    <% images = images[0] %>
+    
+			<section class="container">
+				<article class="images">
+					<header class="title">
+					<% if (user) { %><div class="img-title"><%= images.title %></div>
+					<% } else { %><div class="img-title"><%= images.title %><% } %>
+
+					<!-- this will be show only if user is logged in -->
+					<% if (user) {
+						 if (user.id === images.user_id) { %>
+							<span data=id="<%= images._id %>" data-toggle="modal" data-etitle="<%= images.title %>" data-edesc="<%= images.desc %>" data-target="#image-edit-dialog" class="fa fa-edit"></span>
+							<span data-id="<%= images._id %>" id="del-butt" class="fa fa-times"></span>
+					<% } } %>
+					</header>
+					<div class="image">
+						<img src="https://jpgr-wtf.nyc3.digitaloceanspaces.com/<%= images.file %>" width="614px"/>
+					</div>
+					<div class="footer">
+						<span class="post-date"><%= moment(images.date).fromNow() %></span>
+					</div>
+				</article>
+			</section>
+
+<%- include('partials/footer.ejs') %>

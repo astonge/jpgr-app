@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="/"><img src="/img/logo.png" alt="Jpgr Wtf?" width="176px"></a>
+    <div class="login">
+        <% if (!user) { %>
+          <p class="navbar-text"><a href="/login" class="navbar-link">Login</a></p>
+          <p class="navbar-text"><a href="/auth/google" class="navbar-link">Login?</a></p>
+        <% } else { %>
+          <p class="navbar-text">Jesus Fuck <a href="/profile" class="navbar-link"><%= user.name.givenName %></a>?</p>
+        <% } %>
+    </div>
+  </div>
+</nav>

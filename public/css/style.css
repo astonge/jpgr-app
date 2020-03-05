@@ -1,0 +1,337 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed');
+
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    margin-top:4.5em;
+    padding-top:2em;
+}
+html {
+    overflow-y:scroll;
+    background-color:#FFFFFF;
+}
+.hide {
+    display:none;
+}
+.col-4 {
+    /* border:1px solid blue; */
+}
+.box-2 {
+    /* border:1px solid red; */
+	padding: 0.5em;
+    /* width: calc(100%/2 - 1em); */
+    /* width: calc(100%/2); */
+    /* text-align:center; */
+}
+.post-date {
+    color:#8e8e8e;
+    font-size:0.9rem;
+}
+img {
+    /* max-width: 65%; */
+    max-width: 100%;
+}
+.cropper-modal {
+    background-color:#000 !important;
+}
+.cropper-bg {
+    background-color:#000 !important;
+    background-image:none !important;
+}
+
+
+/* .row {
+	border:1px solid red;
+}
+*/
+/*
+.col-sm {border:1px solid blue;}  */
+
+/*-------------------------
+    General Styles
+--------------------------*/
+
+
+html{
+    min-height:900px;
+}
+
+body{
+    font:15px/1.3 Arial, sans-serif;
+    /*color: #4f4f4f;*/
+}
+
+a, a:visited {
+    outline:none;
+    color:#000000;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+section, footer, header, aside{
+    display: block;
+}
+
+.logo,.images {
+  text-align: left;
+}
+ul.images {
+  list-style: none;
+}
+
+li.image > img {
+	border:1px solid black;
+  padding:20px;
+}
+
+.image > img {
+  width:100%;
+}
+
+section.container {
+  /*display:flex;*/
+  padding-top:10px;
+  max-width:660px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  flex-grow: 1;
+  margin:0 auto;
+  width:100%;
+}
+.nav {
+  font-family:'Roboto';
+  display:flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+  box-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
+  box-direction: normal;
+  flex-direction: row;
+}
+.logo {
+  padding-top:20px;
+  padding-bottom: 20px;
+  /*padding-left:20px;*/
+  width:95%;
+  text-align: left;
+}
+.header-login {
+  padding-top:20px;
+  padding-bottom: 20px;
+  padding-left:20px;
+  text-align: left;
+}
+
+header.title, div.footer {
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-left:20px;
+  text-align: left;
+}
+
+article.images {
+  margin-bottom:60px;
+  background-color:#FFF;
+  border:1px solid #e6e6e6;
+  border-radius: 3px;
+  margin-left:-1px;
+  margin-right:-1px;
+}
+
+.title {
+  font-family:'Roboto';
+  display:flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+  box-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
+  box-direction: normal;
+  flex-direction: row;
+}
+
+.img-title {
+  display:block;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow:hidden;
+  /*line-height: 0;*/
+  text-transform: uppercase;
+}
+.img-desc {
+  font-family:'Roboto Condensed';
+}
+
+span {
+  cursor: pointer;
+}
+#del-butt {
+  margin-right:10px;
+}
+#edit-button {
+  margin-right:10px;
+}
+
+
+/*
+ Front page login
+*/
+.profile-link {
+  font-family:'Roboto Condensed';
+}
+
+/*----------------------------
+    The file upload form
+-----------------------------*/
+
+
+#uploadForm {
+    font-family:'Roboto Condensed', sans-serif;
+    /* background-color:#373a3d; */
+    width:250px;
+    padding:30px;
+    /* border-radius:3px; */
+    margin:60px auto 50px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+}
+.uploadCard {
+    margin:60px auto 50px;    
+}
+
+#drop{
+    background-color: #2E3134;
+    padding: 40px 20px;
+    margin-bottom: 10px;
+    border: 20px solid rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    border-image: url('../img/border-image.png') 25 repeat;
+    text-align: center;
+    text-transform: uppercase;
+
+    font-size:16px;
+    font-weight:bold;
+    color:#7f858a;
+}
+
+#drop a{
+    background-color:#007a96;
+    padding:12px 26px;
+    color:#fff;
+    font-size:14px;
+    border-radius:2px;
+    cursor:pointer;
+    display:inline-block;
+    margin-top:12px;
+    line-height:1;
+}
+
+#drop a:hover{
+    background-color:#0986a3;
+}
+
+#drop input{
+    display:none;
+}
+
+#uploadForm ul{
+    list-style:none;
+    margin:0 -30px;
+    border-top:1px solid #2b2e31;
+    border-bottom:1px solid #3d4043;
+}
+
+#uploadForm ul li{
+
+    background-color:#333639;
+
+    background-image:-webkit-linear-gradient(top, #333639, #303335);
+    background-image:-moz-linear-gradient(top, #333639, #303335);
+    background-image:linear-gradient(top, #333639, #303335);
+
+    border-top:1px solid #3d4043;
+    border-bottom:1px solid #2b2e31;
+    padding:15px;
+    height: 82px;
+
+    position: relative;
+}
+
+#uploadForm ul li input{
+    display: none;
+}
+
+#uploadForm ul li p{
+    width: 144px;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #EEE;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+
+#uploadForm ul li i{
+    font-weight: normal;
+    font-style:normal;
+    color:#7f7f7f;
+    display:block;
+}
+
+#uploadForm ul li canvas{
+    top: 15px;
+    left: 32px;
+    position: absolute;
+}
+
+#uploadForm ul li span{
+    width: 15px;
+    height: 12px;
+    background: url('../img/icons.png') no-repeat;
+    position: absolute;
+    top: 34px;
+    right: 33px;
+    cursor:pointer;
+}
+
+#uploadForm ul li.working span{
+    height: 16px;
+    background-position: 0 -12px;
+}
+
+#uploadForm ul li.error p{
+    color:red;
+}
+
+
+
+@media only screen and (min-width : 360px) {
+
+}
